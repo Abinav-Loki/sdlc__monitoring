@@ -54,9 +54,35 @@
     0%, 100% { opacity: 0.3; transform: scale(1.05); }
     50% { opacity: 0.5; transform: scale(1); }
   }
+  @keyframes morph {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.1) rotate(2deg); }
+  }
+  @keyframes float-random {
+    0%, 100% { transform: translate(0, 0); }
+    33% { transform: translate(30px, -50px); }
+    66% { transform: translate(-20px, 40px); }
+  }
+  @keyframes scan {
+    0%, 100% { transform: translateY(-100%) rotate(45deg); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(100%) rotate(45deg); opacity: 0; }
+  }
 }
 
 @layer utilities {
+  .animate-morph {
+    animation: morph 20s ease-in-out infinite;
+  }
+  .animate-float-random {
+    animation: float-random 15s ease-in-out infinite;
+  }
+  .animate-scan {
+    animation: scan 8s linear infinite;
+  }
+  .animate-scan-delayed {
+    animation: scan 10s linear infinite 3s;
+  }
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
