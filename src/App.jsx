@@ -30,13 +30,24 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-200 selection:bg-lavender/30 selection:text-lavender overflow-x-hidden">
+    <div className="min-h-screen bg-slate-950 text-slate-200 selection:bg-lavender/30 selection:text-lavender overflow-x-hidden relative">
       {view === 'landing' && (
         <LandingPage onGetStarted={() => setView('home')} />
       )}
       
       {view !== 'landing' && (
-        <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <>
+          {/* Dashboard Background */}
+          <div className="fixed inset-0 z-0">
+            <img 
+              src="/sdlc_dashboard_bg.png" 
+              alt="Dashboard BG" 
+              className="w-full h-full object-cover opacity-20 pointer-events-none"
+            />
+            <div className="absolute inset-0 bg-slate-950/40 backdrop-blur-[2px]" />
+          </div>
+
+          <div className="relative z-10 min-h-screen py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <header className="mb-16 text-center animate-in fade-in slide-in-from-top duration-1000">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-gradient">
               SDLC Simulator
