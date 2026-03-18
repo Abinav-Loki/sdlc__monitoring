@@ -15,6 +15,8 @@
   --animate-zoom-in: zoom-in 0.5s ease-out;
   --animate-slide-in-top: slide-in-top 0.5s ease-out;
   --animate-slide-in-bottom: slide-in-bottom 0.5s ease-out;
+  --animate-slide-in-left: slide-in-left 0.5s ease-out;
+  --animate-slide-in-right: slide-in-right 0.5s ease-out;
 
   @keyframes fade-in {
     from { opacity: 0; }
@@ -32,6 +34,14 @@
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
+  @keyframes slide-in-left {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes slide-in-right {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
 }
 
 @layer utilities {
@@ -47,8 +57,26 @@
   .slide-in-from-top-12 {
     animation-name: slide-in-top;
   }
+  .slide-in-from-top-4 {
+    animation-name: slide-in-top;
+  }
+  .slide-in-from-top-2 {
+    animation-name: slide-in-top;
+  }
   .slide-in-from-bottom {
     animation-name: slide-in-bottom;
+  }
+  .slide-in-from-bottom-4 {
+    animation-name: slide-in-bottom;
+  }
+  .slide-in-from-bottom-2 {
+    animation-name: slide-in-bottom;
+  }
+  .slide-in-from-left {
+    animation-name: slide-in-left;
+  }
+  .slide-in-from-right-8 {
+    animation-name: slide-in-right;
   }
   .duration-1000 {
     animation-duration: 1000ms;
