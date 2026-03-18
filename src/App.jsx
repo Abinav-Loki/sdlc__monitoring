@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import ModelCard from './components/ModelCard'
 import SimulationPage from './components/SimulationPage'
 import ComparisonPage from './components/ComparisonPage'
